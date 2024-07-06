@@ -13,7 +13,7 @@ const SearchBar = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.get('https://youtube-backend-fjum.onrender.com', {
+      const response = await axios.get('https://youtube-backend-fjum.onrender.com/search', {
         params: { query },
       });
       setVideos(response.data);
