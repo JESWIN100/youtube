@@ -11,7 +11,7 @@ const HomePage = () => {
 
   const fetchVideos = async (searchTerm = '') => {
     try {
-      const response = await axios.get('http://localhost:5000/search', {
+      const response = await axios.get('https://youtube-backend-fjum.onrender.com/search', {
         params: { query: searchTerm },
       });
       console.log(response.data);
