@@ -11,7 +11,7 @@ const HomePage = () => {
 
   const fetchVideos = async (searchTerm = '') => {
     try {
-      const response = await axios.get('https://youtube-backend-fjum.onrender.com/search', {
+      const response = await axios.get('http://localhost:5000/search', {
         params: { query: searchTerm },
       });
       console.log(response.data);
@@ -35,8 +35,8 @@ const HomePage = () => {
   return (
     <div className="yt-clone-container min-h-screen bg-gray-100">
       <Header query={query} setQuery={setQuery} handleSearch={handleSearch} />
-      <Sidebar />
-      <main className="pt-20 px-4 md:ml-56">
+      {/* <Sidebar /> */}
+      <main className="pt-20 px-4 md:ml-5">
         <VideoGrid videos={videos} />
       </main>
     </div>
